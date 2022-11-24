@@ -1,0 +1,70 @@
+@import "variables";
+@import "functions";
+
+@mixin font-sfpro($weight: 400) {
+    font-family: 'SF Pro Display', Arial, sans-serif;
+    @if $weight { font-weight: $weight; }
+}
+
+@mixin font-exo($weight: 400) {
+    font-family: 'Exo 2', Arial, sans-serif;
+    @if $weight { font-weight: $weight; }
+}
+
+@mixin font-h1() {
+    font-family: 'SF Pro Display', Arial, sans-serif;
+    font-weight: 700;
+    font-size: rem(80);
+    line-height: 1;
+}
+
+@mixin font-h2() {
+    font-family: 'SF Pro Display', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: rem(48);
+    line-height: 1;
+}
+
+@mixin font-h3() {
+    font-family: 'SF Pro Display', Arial, sans-serif;
+    font-weight: 500;
+    font-size: rem(24);
+    line-height: 1.2;
+}
+
+@mixin font-t1-reg() {
+    font-family: 'SF Pro Display', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: 1.5;
+}
+
+@mixin font-t1-med() {
+    font-family: 'SF Pro Display', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: rem(18);
+    line-height: 1.2;
+}
+
+@mixin font-t2-med() {
+    font-family: 'SF Pro Display', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: 1.4;
+}
+
+@mixin font-h1-tablet() {
+    font-family: 'SF Pro Display', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: rem(40);
+    line-height: 1;
+}
+
+@mixin height-100vh {
+    height: calc(var(--vh, 1vh) * 100);
+}

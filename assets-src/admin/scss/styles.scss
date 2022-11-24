@@ -1,0 +1,648 @@
+
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: local('SF Pro Display Thin'), local('SFProDisplay-Thin'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-Thin.woff2') format('woff2'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-Thin.woff') format('woff'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SF Pro Display';
+    src: local('SF Pro Display ThinItalic'), local('SFProDisplay-ThinItalic'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-ThinItalic.woff2') format('woff2'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-ThinItalic.woff') format('woff'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: local('SF Pro Display Ultralight'), local('SFProDisplay-Ultralight'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-Ultralight.woff2') format('woff2'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-Ultralight.woff') format('woff'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-Ultralight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SF Pro Display';
+    src: local('SF Pro Display UltralightItalic'), local('SFProDisplay-UltralightItalic'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-UltralightItalic.woff2') format('woff2'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-UltralightItalic.woff') format('woff'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-UltralightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: local('SF Pro Display Light'), local('SFProDisplay-Light'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-Light.woff2') format('woff2'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-Light.woff') format('woff'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SF Pro Display';
+    src: local('SF Pro Display LightItalic'), local('SFProDisplay-LightItalic'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-LightItalic.woff2') format('woff2'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-LightItalic.woff') format('woff'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: local('SF Pro Display Regular'), local('SFProDisplay-Regular'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-Regular.woff2') format('woff2'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-Regular.woff') format('woff'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SF Pro Display';
+    src: local('SF Pro Display Regular Italic'), local('SFProDisplay-RegularItalic'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-RegularItalic.woff2') format('woff2'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-RegularItalic.woff') format('woff'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-RegularItalic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: local('SF Pro Display Medium'), local('SFProDisplay-Medium'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-Medium.woff2') format('woff2'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-Medium.woff') format('woff'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SF Pro Display';
+    src: local('SF Pro Display MediumItalic'), local('SFProDisplay-MediumItalic'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-MediumItalic.woff2') format('woff2'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-MediumItalic.woff') format('woff'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: local('SF Pro Display Semibold'), local('SFProDisplay-Semibold'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-Semibold.woff2') format('woff2'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-Semibold.woff') format('woff'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SF Pro Display';
+    src: local('SF Pro Display SemiboldItalic'), local('SFProDisplay-SemiboldItalic'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-SemiboldItalic.woff2') format('woff2'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-SemiboldItalic.woff') format('woff'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-SemiboldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: local('SF Pro Display Bold'), local('SFProDisplay-Bold'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-Bold.woff2') format('woff2'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-Bold.woff') format('woff'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SF Pro Display';
+    src: local('SF Pro Display BoldItalic'), local('SFProDisplay-BoldItalic'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-BoldItalic.woff2') format('woff2'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-BoldItalic.woff') format('woff'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: local('SF Pro Display Heavy'), local('SFProDisplay-Heavy'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-Heavy.woff2') format('woff2'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-Heavy.woff') format('woff'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-Heavy.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SF Pro Display';
+    src: local('SF Pro Display HeavyItalic'), local('SFProDisplay-HeavyItalic'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-HeavyItalic.woff2') format('woff2'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-HeavyItalic.woff') format('woff'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-HeavyItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: local('SF Pro Display Black'), local('SFProDisplay-Black'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-Black.woff2') format('woff2'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-Black.woff') format('woff'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SF Pro Display';
+    src: local('SF Pro Display Black Italic'), local('SFProDisplay-BlackItalic'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-BlackItalic.woff2') format('woff2'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-BlackItalic.woff') format('woff'),
+    url('../../theme/fonts/sf-pro-display/SFProDisplay-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Exo 2';
+    src: local('Exo 2 Light'), local('Exo2-Light'),
+    url('../../theme/fonts/exo-2/Exo2-Light.woff2') format('woff2'),
+    url('../../theme/fonts/exo-2/Exo2-Light.woff') format('woff'),
+    url('../../theme/fonts/exo-2/Exo2-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Exo 2';
+    src: local('Exo 2 Regular'), local('Exo2-Regular'),
+    url('../../theme/fonts/exo-2/Exo2-Regular.woff2') format('woff2'),
+    url('../../theme/fonts/exo-2/Exo2-Regular.woff') format('woff'),
+    url('../../theme/fonts/exo-2/Exo2-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Exo 2';
+    src: local('Exo 2 Medium'), local('Exo2-Medium'),
+    url('../../theme/fonts/exo-2/Exo2-Medium.woff2') format('woff2'),
+    url('../../theme/fonts/exo-2/Exo2-Medium.woff') format('woff'),
+    url('../../theme/fonts/exo-2/Exo2-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Exo 2';
+    src: local('Exo 2 SemiBold'), local('Exo2-SemiBold'),
+    url('../../theme/fonts/exo-2/Exo2-SemiBold.woff2') format('woff2'),
+    url('../../theme/fonts/exo-2/Exo2-SemiBold.woff') format('woff'),
+    url('../../theme/fonts/exo-2/Exo2-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Exo 2';
+    src: local('Exo 2 Bold'), local('Exo2-Bold'),
+    url('../../theme/fonts/exo-2/Exo2-Bold.woff2') format('woff2'),
+    url('../../theme/fonts/exo-2/Exo2-Bold.woff') format('woff'),
+    url('../../theme/fonts/exo-2/Exo2-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+.acf-field {
+    .acf-input {
+        .layout-preview {
+            display: block;
+            width: 480px;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+
+.acf-radio-image {
+    .acf-radio-list {
+        margin: 0 -8px;
+        padding: 0;
+        display: flex;
+
+        li {
+            padding: 0 8px;
+            width: 100%;
+            max-width: 480px;
+            margin-right: 0 !important;
+            margin-left: 0;
+        }
+
+        label {
+            position: relative;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            text-align: center;
+
+            input {
+                position: absolute;
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            div {
+                position: relative;
+                border-radius: 2px;
+
+                &:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: -3px;
+                    right: -3px;
+                    bottom: -3px;
+                    left: -3px;
+                    border: 3px solid #008dd4;
+                    border-radius: 2px;
+                    opacity: 0;
+                    transition: all 0.2s ease;
+                }
+            }
+
+            img {
+                display: block;
+                width: 100%;
+            }
+
+            p {
+                margin: 0.5em 0 0;
+                transition: all 0.1s ease;
+            }
+
+            &.selected {
+                div {
+                    &:before {
+                        opacity: 1;
+                    }
+                }
+
+                p {
+                    font-weight: 700;
+                }
+            }
+        }
+
+    }
+}
+
+#acf-theme-general .wp-picker-container .wp-color-result.button {
+    position: relative;
+    background-clip: padding-box !important;
+    border: none;
+    outline: none;
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 30px;
+        border-radius: 3px;
+        box-sizing: border-box;
+        border: 1px solid #646970;
+        transition: border 0.3s ease-in-out;
+    }
+
+    .wp-color-result-text {
+        border-left: 1px solid #646970;
+        transition: border 0.3s ease-in-out;
+    }
+
+    &:hover,
+    &:focus {
+        &:after {
+            border: 1px solid #000000;
+        }
+
+        .wp-color-result-text {
+            border-left: 1px solid #000000;
+        }
+    }
+}
+
+.block-editor-block-list__layout .block-editor-block-list__block {
+    min-height: 100px;
+}
+
+.block-editor-block-list__layout .block-editor-block-list__block:hover:after {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    content: "";
+    top: 1px;
+    bottom: 1px;
+    left: 1px;
+    right: 1px;
+    box-shadow: 0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color);
+    border-radius: 1px;
+    outline: 2px solid transparent
+}
+
+.block-editor__container {
+    .block-editor-block-list__block .acf-field-radio .acf-radio-list,
+    .edit-post-sidebar .acf-field-radio .acf-radio-list {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        margin-left: -8px;
+        margin-right: -8px;
+        margin-top: -20px;
+        width: calc(100% + 16px);
+    }
+
+    .block-editor-block-list__block .acf-field-radio .acf-radio-list li,
+    .edit-post-sidebar .acf-field-radio .acf-radio-list li {
+        flex: 0 0 33.333%;
+        margin-top: 20px;
+        margin-left: 0!important;
+        margin-right: 0!important;
+        padding: 0 8px;
+        min-width: 130px;
+        max-width: 480px;
+        float: none;
+
+        input {
+            visibility: hidden;
+            display: none;
+        }
+
+        label {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            background-color: #fff;
+            text-align: center;
+            line-height: 0;
+
+            &::after {
+                position: absolute;
+                content: '';
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                height: 100%;
+                width: 100%;
+                border: 3px solid transparent;
+            }
+
+            img {
+                margin: 0;
+                flex: 0 0 auto;
+                max-width: 100%;
+            }
+            
+        }
+
+        label.selected {
+            &::after {
+                border: 3px solid var(--wp-admin-theme-color);
+            }
+        }
+    }
+}
+
+@media (min-width: 782px) {
+    .interface-interface-skeleton__secondary-sidebar,
+    .interface-interface-skeleton__sidebar {
+        position: fixed!important;
+        top: 93px;
+        left: auto;
+        right: 0;
+        bottom: 0;
+        overflow: visible;
+        user-select: none;
+        transform: translateZ(0);
+        transform-style: preserve-3d;
+
+        .is-fullscreen-mode & {
+            top: 61px;
+        }
+
+        input, textarea {
+            user-select: auto;
+        }
+
+        .interface-complementary-area,
+        .block-editor-inserter__main-area {
+            height: 100%;
+            overflow-y: auto;
+            padding-bottom: 30px;
+            max-width: calc(100vw - 25px);
+            min-width: 280px;
+
+            @media (min-width: 1025px) {
+                width: 500px;
+            }
+        }
+
+        .sidebar-resizer {
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            z-index: 5;
+            margin-top: -50px;
+            width: 24px;
+            height: 100px;
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            cursor: ew-resize;
+            border-radius: 3px 0 0 3px;
+            transition: border-color ease-in-out .3s, background-color ease-in-out .3s, color ease-in-out .3s;
+            background-clip: border-box;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: -10px;
+                left: 0;
+                right: -10px;
+                bottom: -10px;
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+                border-color: #007cba;
+                background: #008dd4;
+                color: #fff;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                margin-top: -4px;
+                right: 8px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 5px 8px 5px 0;
+                border-color: transparent currentColor transparent transparent;
+            }
+        }
+    }
+
+    .interface-interface-skeleton__secondary-sidebar {
+        right: auto;
+        left: 0;
+    }
+
+    .widgets-php {
+        .interface-interface-skeleton__secondary-sidebar,
+        .interface-interface-skeleton__sidebar {
+            position: relative !important;
+            top: 0;
+        }
+    }
+}
+
+.select2-container.-acf .select2-selection.select2-selection--multiple .select2-selection__choice.ui-sortable-helper span {
+	visibility: visible;
+}
+
+.wp-admin.widgets-php {
+    .footer-contact-link,
+    .footer-contact-form,
+    .footer-menu-column,
+    .footer-contact-info,
+    .footer-big-menu,
+    .footer-media {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        flex: 0 0 auto;
+        max-width: 100%;
+        width: 100%;
+
+        .widget {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+}
+
+.wpseo-meta-section.active .wpseo-metabox-root {
+    button {
+        font-size: 13px;
+        font-weight: 500;
+
+        span {
+            span {
+               color: #1e1e1e;
+            }
+        }
+    }
+}
+
+.block-editor .edit-post-sidebar .acf-fields > .acf-field.acf-accordion .acf-accordion-title label {
+    font-weight: 500 !important;
+}
+
+.block-editor .edit-post-sidebar .acf-fields .acf-accordion .acf-accordion-title svg.acf-accordion-icon {
+    right: 16px;
+    width: 22px;
+    height: 22px;
+}
+
+.custom-message-container {
+    display: flex;
+    align-items: center;
+}
+
+.custom-message-icon {
+    flex: 0 0 20px;
+    display: inline-flex;
+    margin-right: 5px;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 100%;
+}
+
+.custom-message {
+    font-style: italic;
+}
+
+.acf-link.-value .link-wrap{
+    .acf-icon.-link-ext {
+        display: none !important;
+    }
+
+    .acf-icon {
+        position: relative;
+        width: 28px !important;
+        height: 28px !important;
+        font-size: 20px;
+        line-height: 1;
+        vertical-align: middle;
+
+        &:before {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+        }
+    }
+}
+
+.acf-field .acf-input  {
+    .acf-icon.-pencil,
+    .acf-icon.-cancel {
+        width: 28px !important;
+        height: 28px !important;
+    }
+}
+
+.acf-input .wp-editor-container .mce-widget.mce-btn[aria-label="Fullscreen"] {
+    display: none !important;
+}
+
+.acf-input .wp-editor-container #mceu_75.mce-widget.mce-btn.mce-menubtn {
+    display: none !important;
+}
+
+.nf-actions-table, .nf-table-display {
+    word-break: normal !important;
+}
+
+.block-editor-list-view-tree {
+    margin-bottom: 20px;
+}
+
+.interface-interface-skeleton__secondary-sidebar,
+.interface-interface-skeleton__sidebar {
+    top: 32px;
+}
+
+body.is-fullscreen-mode {
+    .interface-interface-skeleton__secondary-sidebar,
+    .interface-interface-skeleton__sidebar {
+        top: 61px;
+    }
+}

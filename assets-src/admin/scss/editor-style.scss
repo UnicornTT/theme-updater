@@ -1,0 +1,120 @@
+@import "../../theme/scss/base/variables";
+
+html.interface-interface-skeleton__html-container {
+    font-size: 10px !important;
+    word-break: break-word;
+
+    @media (max-width: $breakpoint-xxl - 0.5) {
+        font-size: 8px !important;
+    }
+
+    @media (max-width: $breakpoint-xxm - 0.5) {
+        font-size: 8px !important;
+    }
+
+    @media (max-width: $breakpoint-xl - 0.5) {
+        font-size: 10px !important;
+    }
+}
+
+html :where(.wp-block) {
+    margin-top: 0!important;
+
+    *,
+    *::before,
+    *::after {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        outline: none;
+        box-sizing: border-box;
+    }
+}
+
+input[type=checkbox], input[type=radio] {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+}
+
+input[type=checkbox]:checked::before {
+    margin: -3px 0 0 -4px;
+    height: 21px;
+    width: 21px;
+}
+
+input[type=radio]:checked::before {
+    width: 8px;
+    height: 8px;
+    margin: 3px;
+}
+
+.edit-post-visual-editor__post-title-wrapper {
+    margin: -10px -8px 0 !important;
+    padding: 4rem;
+    padding-bottom: var(--wp--style--block-gap);
+
+    h1 {
+        margin-bottom: 0 !important;
+    }
+}
+
+//.wp-block {
+
+    .acf-block-preview {
+        @import "../../theme/scss/base/mixins";
+        @import "../../theme/scss/base/functions";
+        @import "../../theme/scss/base/normalize";
+        //@import "../../theme/scss/base/fonts";
+        @import "../../theme/scss/base/grid";
+
+        @import "../../theme/scss/base/common";
+
+        @import "../../theme/scss/vendor/swiper-bundle";
+        @import "../../theme/scss/vendor/jquery.scrollbar";
+
+        font-size: rem(18);
+        @include font-sfpro(400);
+        line-height: 1.4;
+        min-width: 360px;
+        & * {
+            pointer-events: none !important;
+        }
+
+        @import "../../theme/scss/components/buttons";
+        @import "../../theme/scss/components/modals";
+        @import "../../theme/scss/components/dropdowns";
+        @import "../../theme/scss/components/widgets-sidebar";
+
+    }
+
+//}
+
+.acf-true-false {
+    input {
+        width: 3rem;
+        height: 3rem;
+
+        &:checked::before {
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+}
+
+.editor-styles-wrapper .acf-block-preview p {
+    line-height: unset;
+}
+
+.is-focus-mode .block-editor-block-list__block:not(.has-child-selected) {
+    opacity: 1;
+    transition: opacity 0.1s linear;
+}
+
+.editor-post-title.is-focus-mode {
+    opacity: 1;
+    transition: opacity 0.1s linear;
+}
+
+.nf-settings .note-editor h3 {
+    font-size: 1.15em;
+    text-transform: none;
+}

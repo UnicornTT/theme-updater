@@ -1,0 +1,164 @@
+{
+    "key": "group_632afaf3efc8a",
+    "title": "Block: Portfolio Options",
+    "fields": [
+        {
+            "key": "portfolio_section_choose_variants_key",
+            "label": "Section Style",
+            "name": "portfolio_section_choose_variants",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "v1": "<img src=\/wp-content\/themes\/harbingermarketingtemplate\/assets\/admin\/img\/block-previews\/block-preview-section-protfolio-v1.jpg>",
+                "v2": "<img src=\/wp-content\/themes\/harbingermarketingtemplate\/assets\/admin\/img\/block-previews\/block-preview-section-protfolio-v2.jpg>"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "v1",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "portfolio_section_title_key",
+            "label": "Section Title",
+            "name": "portfolio_section_title",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Portfolio",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6336a278a090a",
+            "label": "Portfolio Type",
+            "name": "portfolio_type",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "categories": "Categories",
+                "projects": "Projects"
+            },
+            "default_value": "сategories",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "portfolio_projects_key",
+            "label": "Select Projects",
+            "name": "portfolio_projects",
+            "type": "relationship",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6336a278a090a",
+                        "operator": "==",
+                        "value": "projects"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "hmt_project"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "post_type"
+            ],
+            "return_format": "object",
+            "min": "",
+            "max": "",
+            "elements": ""
+        },
+        {
+            "key": "portfolio_projects_categories_key",
+            "label": "Select Project Categories",
+            "name": "portfolio_projects_categories",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6336a278a090a",
+                        "operator": "==",
+                        "value": "categories"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "hmt_project_category",
+            "add_term": 1,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "object",
+            "field_type": "multi_select",
+            "acfe_bidirectional": {
+                "acfe_bidirectional_enabled": "0"
+            },
+            "allow_null": 0,
+            "multiple": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/section-portfolio"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1667369292
+}

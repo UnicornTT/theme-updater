@@ -1,0 +1,291 @@
+@import "../base/variables";
+@import "../base/functions";
+@import "../base/mixins";
+
+.error404 .main-wrapper {
+  padding-top: 0 !important;
+}
+
+.section-page-404 {
+  position: relative;
+  padding: rem(70) 0;
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+
+  @media (max-width: $breakpoint-xl - 0.5) and (orientation: landscape) {
+    padding: rem(40) 0;
+  }
+
+  @media (max-width: $breakpoint-lg - 0.5) and (orientation: landscape) {
+    padding: rem(30) 0;
+  }
+
+  .admin-bar & {
+    min-height: calc((var(--vh, 1vh) * 100) - 32px);
+
+    @media (max-width: 782px) {
+      min-height: calc((var(--vh, 1vh) * 100) - 46px);
+    }
+  }
+
+  &__bg {
+    &:before {
+      display: none;
+    }
+  }
+
+  .section__body {
+    margin: auto;
+    flex: 0 0 100%;
+    max-width: 100%;
+
+    .section-page-404 {
+      &__content-wrapper {
+        padding: rem(120) rem(296);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+
+        @media (max-width: $breakpoint-xl - 0.5) {
+          padding: rem(80) rem(100);
+
+          @media (orientation: landscape) {
+            padding: rem(60) rem(64);
+          }
+        }
+
+        @media (max-width: $breakpoint-lg - 0.5) {
+          padding: rem(90) rem(64);
+
+          @media (orientation: landscape) {
+            padding: rem(40) rem(64);
+          }
+        }
+
+        @media (max-width: $breakpoint-md - 0.5) {
+          padding: rem(60) rem(30);
+
+          @media (orientation: landscape) {
+            padding: rem(30);
+          }
+        }
+
+        .theme-dark & {
+          background-color: rgba(var(--color-black-RGB), 0.8);
+          transition: background-color $transition-default;
+        }
+
+        .theme-light & {
+          background-color: rgba(var(--color-white-RGB), 1);
+          transition: color $transition-default;
+        }
+
+        @supports not (( backdrop-filter: blur(10px) ) or ( -webkit-backdrop-filter: blur(10px) )) {
+          .theme-dark & {
+            background-color: rgba(var(--color-black-RGB), 0.97);
+            transition: background-color $transition-default;
+          }
+
+          .theme-light & {
+            background-color: rgba(var(--color-white-RGB), 1);
+            backdrop-filter: none;
+            transition: color $transition-default;
+          }
+        }
+      }
+
+      &__content {
+        margin: auto;
+        max-width: rem(510);
+        text-align: center;
+
+        .text-content {
+          br,
+          br:first-child {
+            display: block !important;
+          }
+        }
+
+        @media (max-width: $breakpoint-lg - 0.5) {
+          max-width: rem(385);
+        }
+
+        @media (max-width: $breakpoint-md - 0.5) {
+          max-width: rem(320);
+
+          @media (orientation: landscape) {
+            max-width: 100%;
+          }
+        }
+
+        @media (max-width: $breakpoint-sm - 0.5) {
+          max-width: rem(260);
+
+          @media (orientation: landscape) {
+            max-width: 100%;
+          }
+        }
+      }
+
+      &__error {
+        margin-bottom: rem(12);
+        text-align: center;
+
+        @media (max-width: $breakpoint-lg - 0.5) {
+          margin-bottom: rem(20);
+          //max-width: rem(350);
+
+          @media (orientation: landscape) {
+            margin-bottom: rem(10);
+          }
+        }
+
+        .error-number {
+          font-size: rem(180);
+          @include font-sfpro(600);
+          line-height: 1.2;
+          letter-spacing: 0.03em;
+          //text-transform: capitalize;
+          color: var(--color-accent-1);
+          text-shadow: 0 0 5rem rgba(var(--color-accent-1-RGB), 0.5);
+
+          @media (max-width: $breakpoint-xl - 0.5) {
+            font-size: rem(120);
+          }
+
+          @media (max-width: $breakpoint-md - 0.5) {
+            font-size: rem(80);
+
+            @media (orientation: landscape) {
+              font-size: rem(60);
+              line-height: 1;
+            }
+          }
+        }
+      }
+
+      &__message {
+        margin-bottom: rem(24);
+        text-align: center;
+
+        @media (max-width: $breakpoint-lg - 0.5) {
+          margin-bottom: rem(20);
+
+          @media (orientation: landscape) {
+            margin-bottom: rem(16)
+          }
+        }
+        @media (max-width: $breakpoint-md - 0.5) {
+          @media (orientation: landscape) {
+            margin-bottom: rem(10);
+          }
+        }
+
+        .message-text {
+          @include font-sfpro(600);
+          font-size: rem(48);
+          line-height: 100%;
+
+          br {
+            display: none;
+          }
+
+          @media (max-width: $breakpoint-lg - 0.5) {
+            font-size: rem(36);
+            //max-width: rem(350);
+          }
+
+          @media (max-width: $breakpoint-md - 0.5) {
+            br {
+              display: block;
+            }
+
+            @media (orientation: landscape) {
+              font-size: rem(24);
+            }
+          }
+        }
+      }
+
+      &__description {
+        margin-bottom: rem(60);
+
+        @media (max-width: $breakpoint-xl - 0.5) {
+          margin-bottom: rem(40);
+        }
+
+        @media (max-width: $breakpoint-lg - 0.5) {
+          margin-bottom: rem(30);
+
+          @media (orientation: landscape) {
+            margin-bottom: rem(24);
+          }
+        }
+
+        .description-text {
+          @include font-sfpro(600);
+          font-size: rem(24);
+          line-height: 120%;
+
+          @media (max-width: $breakpoint-lg - 0.5) {
+            font-size: rem(18);
+            //max-width: rem(385);
+          }
+
+          @media (max-width: $breakpoint-md - 0.5) {
+            @media (orientation: landscape) {
+              font-size: rem(16);
+            }
+          }
+
+          .theme-dark & {
+            color: rgba(var(--color-white-RGB), 0.4);
+            transition: background-color $transition-default;
+          }
+
+          .theme-light & {
+            color: rgba(var(--color-black-RGB), 0.6);
+            transition: color $transition-default;
+          }
+        }
+      }
+
+      &__button-wrapper {
+        @media (max-width: $breakpoint-lg - 0.5) {
+          //max-width: rem(385);
+        }
+      }
+
+      &__button {
+        text-transform: none;
+
+        .theme-dark & {
+          color: rgba(var(--color-white-RGB-RGB), 0.8);
+
+          &:before {
+            border-color: rgba(var(--color-white-RGB), 0.8);
+          }
+
+          &:after {
+            background: var(--color-white);
+          }
+        }
+
+        .theme-light & {
+          color: rgba(var(--color-black-RGB), 0.8);
+
+          &:before {
+            border-color: rgba(var(--color-black-RGB), 0.8);
+          }
+
+          &:after {
+            background: var(--color-black);
+          }
+        }
+      }
+
+    }
+  }
+
+}

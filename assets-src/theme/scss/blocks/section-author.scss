@@ -1,0 +1,239 @@
+@import "../base/variables";
+@import "../base/functions";
+@import "../base/mixins";
+
+.section-author,
+.acf-block-preview .section-author {
+  padding-top: rem(120);
+  padding-bottom: rem(120);
+
+  @media (max-width: $breakpoint-xl - 0.5) {
+    padding-top: rem(60);
+    padding-bottom: rem(60);
+  }
+
+  &__top {
+    padding-bottom: rem(40);
+
+    @media (max-width: $breakpoint-xxm - 0.5) {
+      padding-bottom: rem(35);
+    }
+
+    @media (max-width: $breakpoint-lg - 0.5) {
+      padding-bottom: rem(24);
+    }
+
+    @media (max-width: $breakpoint-md - 0.5) {
+      padding-bottom: rem(20);
+    }
+
+    .author-link {
+      display: inline-flex;
+      flex-direction: row;
+      align-items: center;
+      text-decoration: none;
+      color: var(--color-accent-2);
+      transition: all $transition-default;
+
+      &:hover {
+        .theme-light & {
+          color: var(--color-black);
+        }
+        .theme-dark & {
+          color: var(--color-white);
+        }
+      }
+
+      &__icon {
+        flex: 0 0 auto;
+        width: rem(24);
+        height: rem(22);
+      }
+
+      &__text {
+        flex: 0 0 auto;
+        @include font-sfpro(400);
+        font-size: rem(18);
+        line-height: 1.5;
+      }
+    }
+  }
+
+  &__left {
+    position: relative;
+    padding-top: rem(45);
+    padding-bottom: rem(45);
+
+    @media (max-width: $breakpoint-xxm - 0.5) {
+      padding-right: rem(20);
+      padding-top: rem(35);
+      padding-bottom: rem(35);
+    }
+
+    @media (max-width: $breakpoint-lg - 0.5) {
+      padding-top: rem(24);
+      padding-bottom: rem(24);
+    }
+
+    @media (max-width: $breakpoint-md - 0.5) {
+      padding-right: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: rem(140);
+      z-index: -1;
+      content: '';
+      width: 100vw;
+      height: 100%;
+      -moz-transition: background-color $transition-default;
+      transition: background-color $transition-default;
+
+      @media (max-width: $breakpoint-md - 0.5) {
+        top: initial;
+        right: 50%;
+        bottom: rem(217);
+        transform: translateX(50%);
+      }
+
+      .theme-light & {
+        background-color: $lt-gray-main;
+      }
+
+      .theme-dark & {
+        background-color: $dt-gray-dark;
+      }
+    }
+  }
+
+  &__image-cover {
+    width: 100%;
+    height: rem(720);
+    overflow: hidden;
+
+    @media (max-width: $breakpoint-xxm - 0.5) {
+      height: rem(550);
+    }
+
+    @media (max-width: $breakpoint-lg - 0.5) {
+      height: rem(450);
+    }
+
+    @media (max-width: $breakpoint-sm - 0.5) {
+      height: rem(340);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__right {
+    padding-top: rem(45);
+
+    @media (max-width: $breakpoint-xxm - 0.5) {
+      padding-top: rem(35);
+    }
+
+    @media (max-width: $breakpoint-lg - 0.5) {
+      padding-top: rem(24);
+    }
+
+    @media (max-width: $breakpoint-md - 0.5) {
+      padding-top: rem(20);
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: rem(12);
+  }
+
+  &__name {
+    margin-bottom: rem(20);
+
+    @media (max-width: $breakpoint-xl - 0.5) {
+      margin-bottom: rem(16);
+    }
+  }
+
+  &__position {
+    margin-bottom: rem(20);
+    line-height: 1.2;
+    -moz-transition: color $transition-default;
+    transition: color $transition-default;
+
+    p {
+      margin: 0 !important;
+    }
+
+    @media (max-width: $breakpoint-xl - 0.5) {
+      margin-bottom: rem(12);
+      font-size: rem(20);
+    }
+  }
+
+  &__description {
+    @include font-sfpro(400);
+    font-size: rem(18);
+    line-height: 1.5;
+    -moz-transition: color $transition-default;
+    transition: color $transition-default;
+
+    b,
+    strong,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      -moz-transition: color $transition-default;
+      transition: color $transition-default;
+
+      .theme-light & {
+        color: var(--color-black);
+      }
+
+      .theme-dark & {
+        color: var(--color-white);
+      }
+    }
+
+    b,
+    strong {
+      @include font-sfpro(600);
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: rem(40);
+
+      @media (max-width: $breakpoint-md - 0.5) {
+        margin-bottom: rem(20);
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .theme-light & {
+    &__description,
+    &__position {
+      color: rgba(var(--color-black-RGB), .6)
+    }
+  }
+
+  .theme-dark & {
+    &__description,
+    &__position {
+      color: rgba(var(--color-white-RGB), .6)
+    }
+  }
+}

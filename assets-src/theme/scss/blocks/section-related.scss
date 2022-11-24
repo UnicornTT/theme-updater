@@ -1,0 +1,533 @@
+@import "../base/variables";
+@import "../base/functions";
+@import "../base/mixins";
+
+.section-related,
+.acf-block-preview .section-related {
+  padding: rem(60) 0 rem(120);
+
+  /*@media (max-width: $breakpoint-xxl - 0.5) {
+    padding: rem(100) 0;
+  }*/
+
+  @media (max-width: $breakpoint-xl - 0.5) {
+    padding: rem(60) 0;
+  }
+
+  .related-card {
+    position: relative;
+    height: rem(300);
+    color: $white;
+    background-color: var(--color-black);
+
+    @media (max-width: $breakpoint-xl - 0.5) {
+      height: rem(262);
+    }
+
+    @media (max-width: $breakpoint-md - 0.5) {
+      height: auto;
+      padding-top: rem(50);
+    }
+
+    &__bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        background: linear-gradient(90deg, rgba(var(--color-black-RGB), 0.72) 0%, rgba(var(--color-black-RGB), .2) 100%);
+        transition: opacity $transition-default;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 3;
+      height: 100%;
+      background-color: rgba(var(--color-accent-1-RGB), .5);
+      max-height: 0;
+      transition: max-height $transition-default;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      height: rem(2);
+      background-color: var(--color-accent-1);
+      -moz-box-shadow: 0 0 rem(10) rgba(var(--color-accent-1-RGB), 1);
+      -webkit-appearance: none;
+      -webkit-box-shadow: 0 0 rem(10) rgba(var(--color-accent-1-RGB), 1);
+      box-shadow: 0 0 rem(10) rgba(var(--color-accent-1-RGB), 1);
+    }
+
+    &__content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 3;
+      padding: rem(20);
+      display: flex;
+      flex-direction: column;
+
+      &>* {
+        flex: 0 0 auto;
+        max-width: 100%;
+      }
+
+      @media (max-width: $breakpoint-xl - 0.5) {
+        padding: rem(30) rem(20);
+      }
+
+      @media (max-width: $breakpoint-md - 0.5) {
+        position: relative;
+        padding: rem(20);
+      }
+    }
+
+    &__body {
+      margin-top: auto;
+      max-width: rem(290);
+    }
+
+    &__title {
+      display: block;
+      color: $white;
+      font-size: rem(24);
+      text-decoration: none;
+      opacity: 1;
+      transition: opacity $transition-default;
+
+      &>* {
+        margin-bottom: rem(-2);
+        padding-bottom: rem(2);
+        max-height: rem(50);
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      @media (max-width: $breakpoint-xxl - 0.5) {
+        &>* {
+          margin-bottom: -1px;
+          padding-bottom: 1px;
+          max-height: calc(6rem + 1px);
+        }
+      }
+
+      @media (max-width: $breakpoint-xl - 0.5) {
+        &>* {
+          margin-bottom: rem(-2);
+          padding-bottom: rem(2);
+          max-height: rem(50);
+        }
+      }
+
+      @media (max-width: $breakpoint-md - 0.5) {
+        font-size: rem(20);
+
+        &>* {
+          margin-bottom: rem(-1);
+          padding-bottom: rem(1);
+          max-height: rem(41);
+        }
+      }
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        opacity: .8;
+      }
+    }
+
+    &__description {
+      margin-top: rem(10);
+      display: -webkit-box;
+      max-height: rem(44);
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      @include font-sfpro(500);
+      font-size: rem(16);
+      opacity: .8;
+    }
+
+    &__date {
+      margin-top: rem(30);
+      font-size: rem(14);
+      line-height: 1.5;
+
+      @media (max-width: $breakpoint-xl - 0.5) {
+        margin-top: rem(15);
+      }
+
+      @media (max-width: $breakpoint-md - 0.5) {
+        margin-top: rem(10);
+      }
+
+      span {
+        opacity: .6;
+      }
+    }
+
+    &__author {
+      position: relative;
+      color: var(--color-white);
+      text-decoration: none;
+      -moz-transition: color $transition-default;
+      transition: color $transition-default;
+      padding-bottom: rem(2);
+
+      &::before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: var(--color-white);
+        transition: opacity $transition-default;
+      }
+
+      &:hover,
+      &:focus {
+        &:before {
+          opacity: 0;
+        }
+      }
+    }
+
+    &__button-wrapper {
+      @media (min-width: $breakpoint-xl) {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        line-height: 0;
+        transition: max-height $transition-default, opacity $transition-default;
+      }
+    }
+
+    &__button {
+      margin-top: rem(35);
+
+      @media (max-width: $breakpoint-xl - 0.5) {
+        margin-top: rem(20);
+      }
+
+      @media (max-width: $breakpoint-md - 0.5) {
+        margin-top: rem(20);
+      }
+    }
+
+    &--full {
+      @supports (display: grid) or (display: -ms-grid) {
+        @media (min-width: $breakpoint-xl) {
+          height: rem(620);
+
+          .related-card {
+            &__bg {
+              &::after {
+                background: linear-gradient(360deg, rgba(var(--color-black-RGB), 0.72) 0%, rgba(var(--color-black-RGB), .2) 100%);
+              }
+            }
+
+            &__content {
+              @media (min-width: $breakpoint-xl) {
+                padding: rem(140) rem(30) rem(140);
+              }
+            }
+
+            &__body {
+              @media (min-width: $breakpoint-xl) {
+                max-width: rem(500);
+              }
+            }
+
+            &__title {
+              @media (min-width: $breakpoint-xl) {
+                font-size: 3.2rem;
+
+                &>* {
+                  max-height: calc(6.4rem + 2px);
+                  padding-bottom: 2px;
+                  margin-bottom: -2px;
+                }
+              }
+
+              @media (min-width: $breakpoint-xxm) {
+                font-size: 4.8rem;
+
+                &>* {
+                  max-height: calc(9.6rem + 3px);
+                  padding-bottom: 3px;
+                  margin-bottom: -3px;
+                }
+              }
+
+              @media (min-width: $breakpoint-xxl) {
+                font-size: rem(48);
+
+                &>* {
+                  max-height: rem(99);
+                  padding-bottom: rem(3);
+                  margin-bottom: rem(-3);
+                }
+              }
+            }
+
+            &__description {
+              @media (min-width: $breakpoint-xl) {
+                margin-top: rem(16);
+                max-height: rem(75);
+                font-size: rem(18);
+                -webkit-line-clamp: 3;
+              }
+            }
+
+            &__date {
+              @media (min-width: $breakpoint-xl) {
+                margin-top: rem(20);
+              }
+            }
+
+            &__button-wrapper {
+              margin-bottom: auto;
+            }
+          }
+        }
+      }
+    }    
+
+    &:hover,
+    &:focus {
+      &::before {
+        max-height: 100%;
+      }
+
+      .related-card {
+        &__bg {
+          &::after {
+            opacity: 0;
+          }
+        }
+
+        &__button-wrapper {
+          @media (min-width: $breakpoint-xl) {
+            opacity: 1;
+            max-height: rem(95);
+          }
+        }
+      }
+    }
+  }
+
+  .recent-blogs {
+    position: relative;
+
+    &__header {
+      padding-right: rem(260);
+
+      @media(max-width: $breakpoint-xl - 0.5) {
+        padding-right: 0;
+      }
+    }
+
+    &__slider {
+      padding-top: rem(27);
+      overflow: visible;
+
+      .swiper-controls {
+        @media (min-width: $breakpoint-xl) {
+          position: absolute;
+          right: 0;
+          bottom: 100%;
+        }
+
+        @media (max-width: $breakpoint-xl - 0.5) {
+          position: relative;
+          right: 0;
+          bottom: 0;
+          margin-top: rem(24);
+          margin-left: auto;
+          margin-right: auto;
+          display: flex;
+          width: rem(152);
+        }
+
+        @media (max-width: $breakpoint-md - 0.5) {
+          margin-top: rem(20);
+        }
+      }
+    }
+
+    &__grid {
+      @media (min-width: $breakpoint-xl) {
+        @supports (display: grid) {
+          display: grid;
+          grid-auto-flow: row dense;
+          grid-auto-columns: 1fr;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-template-rows: 1fr 1fr 1fr;
+          gap: 0 rem(20);
+          grid-template-areas:
+          "Full Full Top Top"
+          "Full Full Center Center"
+          "Full Full Bottom Bottom";
+        }
+      }
+    }
+
+    &__cell {
+      padding-top: rem(13);
+
+      @media (min-width: $breakpoint-xl) {
+        @supports (display: grid) {
+          &:first-child {
+            grid-area: Full;
+          }
+
+          &:nth-child(2) {
+            grid-area: Top;
+          }
+
+          &:nth-child(3) {
+            grid-area: Center;
+          }
+
+          &:nth-child(4) {
+            grid-area: Bottom;
+          }
+        }
+      }
+    }
+
+    .related-card {
+      &::after {
+        height: 100%;
+        width: rem(2);
+      }
+
+      &__description {
+        margin-top: rem(12);
+
+        @media (max-width: $breakpoint-xl - 0.5) {
+          max-height: rem(66);
+          -webkit-line-clamp: 3;
+        }
+      }
+
+      &__date {
+        margin-top: rem(16);
+        font-size: rem(14);
+
+        @media (max-width: $breakpoint-xl - 0.5) {
+          margin-top: rem(24);
+        }
+
+        @media (max-width: $breakpoint-md - 0.5) {
+          margin-top: rem(16);
+          font-size: rem(14);
+        }
+      }
+
+      &--full {
+        @supports (display: grid) or (display: -ms-grid) {
+          @media (min-width: $breakpoint-xl) {
+            .related-card__date {
+              font-size: rem(16);
+            }
+          }
+        }
+      }
+
+      &__content {
+        padding: rem(20) rem(40);
+
+        @media (max-width: $breakpoint-md - 0.5) {
+          padding: rem(20) rem(16);
+        }
+      }
+
+      @media (min-width: $breakpoint-md) {
+        height: rem(200);
+
+        @media (max-width: $breakpoint-xl - 0.5) {
+          height: rem(240);
+
+          .related-card {
+            &__content {
+              flex-direction: row;
+              align-items: flex-end;
+              justify-content: space-between;
+            }
+          }
+        }
+
+        &--full {
+          .related-card {
+            &__button-wrapper {
+              margin-bottom: 0;
+            }
+
+            &__bg::after {
+              @media (max-width: $breakpoint-xl - 0.5) and (min-width: $breakpoint-md) {
+                background: linear-gradient(90deg, rgba(var(--color-black-RGB), .9) 0%, rgba(var(--color-black-RGB), 0) 143.38%);
+              }
+            }
+          }
+
+          @media (min-width: $breakpoint-xl) {
+            height: rem(626);
+
+            &::after {
+              height: rem(2);
+              width: 100%;
+            }
+
+            .related-card {
+              &__content {
+                padding: rem(40);
+              }
+            }
+          }
+        }
+
+        @media (min-width: $breakpoint-md) {
+          &:not(.related-card--full) {
+            .related-card {
+              &__content {
+                flex-direction: row;
+                align-items: flex-end;
+                justify-content: space-between;
+              }
+
+              &__bg::after {
+                background: linear-gradient(90deg, rgba(var(--color-black-RGB), .9) 0%, rgba(var(--color-black-RGB), 0) 143.38%);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

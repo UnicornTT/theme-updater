@@ -1,0 +1,134 @@
+{
+    "key": "group_632b03f05e32c",
+    "title": "Clone: Popup Video",
+    "fields": [
+        {
+            "key": "video_type_key",
+            "label": "Video Type",
+            "name": "video_type",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "empty": "None",
+                "self_hosted": "Locally-hosted",
+                "youtube": "YouTube"
+            },
+            "allow_null": 0,
+            "default_value": "empty",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "video_file_key",
+            "label": "Video File",
+            "name": "video_file",
+            "type": "file",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "video_type_key",
+                        "operator": "==",
+                        "value": "self_hosted"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "uploader": "",
+            "return_format": "id",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ".mp4",
+            "library": "all"
+        },
+        {
+            "key": "image_poster_key",
+            "label": "Image Poster",
+            "name": "image_poster",
+            "type": "image",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "video_type_key",
+                        "operator": "==",
+                        "value": "self_hosted"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "uploader": "",
+            "acfe_thumbnail": 0,
+            "return_format": "id",
+            "preview_size": "thumbnail",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ".jpg, jpeg, .png",
+            "library": "all"
+        },
+        {
+            "key": "youtube_link_key",
+            "label": "YouTube Link",
+            "name": "youtube_link",
+            "type": "url",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "video_type_key",
+                        "operator": "==",
+                        "value": "youtube"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1667369292
+}

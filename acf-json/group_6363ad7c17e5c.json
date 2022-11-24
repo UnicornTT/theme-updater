@@ -1,0 +1,157 @@
+{
+    "key": "group_6363ad7c17e5c",
+    "title": "Section Paddings",
+    "fields": [
+        {
+            "key": "field_6363ad7cb4ae1",
+            "label": "Paddings",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_6363aebbfea13",
+            "label": "Top Padding",
+            "name": "section_top_padding_type",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "None",
+                "small": "Small",
+                "default": "Medium",
+                "large": "Large"
+            },
+            "default_value": "default",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_6363c11878da6",
+            "label": "Bottom Padding",
+            "name": "section_bottom_padding_type",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "None",
+                "small": "Small",
+                "default": "Medium",
+                "large": "Large"
+            },
+            "default_value": "default",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "all"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/widget-resources-search"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/widget-resources-categories"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/widget-resources-tags"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/widget-resources-recent"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/widget-footer-contact-link"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/widget-footer-menu-column"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/widget-footer-big-menu"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/widget-footer-contacts"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/widget-footer-contact-form"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/widget-footer-media"
+            }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/section-intro"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_display_title": "Section Paddings",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1668165337
+}

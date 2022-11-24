@@ -1,0 +1,89 @@
+{
+    "key": "group_634e6f9b113a2",
+    "title": "Clone: NF Form Selector",
+    "fields": [
+        {
+            "key": "field_634e70f1c927a",
+            "label": "",
+            "name": "use_default_form",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "message": "Default or custom form?",
+            "default_value": 1,
+            "ui_on_text": "Default",
+            "ui_off_text": "Custom",
+            "ui": 1
+        },
+        {
+            "key": "field_634e731ec927c",
+            "label": "Form",
+            "name": "ninja_form_id_selector",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_634e70f1c927a",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "70",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "2": "Request Consultation",
+                "5": "Contact Us",
+                "7": "Job Application",
+                "8": "Registration event",
+                "9": "Subscription Form"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_custom": 0,
+            "search_placeholder": "",
+            "allow_null": 0,
+            "ui": 1,
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_display_title": "Clone: NF Form Selector",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "This",
+    "modified": 1667369292
+}
