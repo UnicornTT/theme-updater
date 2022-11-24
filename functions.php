@@ -30,6 +30,7 @@ function load_theme_dependencies() {
 	require_once('lib/actions.php');
 	require_once('lib/sidebars.php');
 	require_once('lib/sitemap.php');
+	require_once('lib/updater.php');
 }
 
 

@@ -7,7 +7,7 @@ if ( ! class_exists( 'HM_Private_Theme_Updater' ) ) {
 		public $cache_allowed;
 
 		public function __construct() {
-			var_dump('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA');
+			// var_dump('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA');
 			$this->theme_slug    = 'base';
 			$this->version       = wp_get_theme( $this->theme_slug )->get('Version');
 			$this->cache_key     = 'hm_theme_update_cache';
@@ -17,9 +17,9 @@ if ( ! class_exists( 'HM_Private_Theme_Updater' ) ) {
 			add_filter( 'site_transient_update_themes', array( $this, 'update' ) );
 			add_action( 'upgrader_process_complete', array( $this, 'cache' ), 10, 2 );
 
-			themes_api( 'theme_information', (object) array(
-				'slug' => $this->theme_slug,
-			) );
+			// themes_api( 'theme_information', (object) array(
+			// 	'slug' => $this->theme_slug,
+			// ) );
 		}
 
 		public function request() {
