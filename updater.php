@@ -7,6 +7,7 @@ if ( ! class_exists( 'HM_Private_Theme_Updater' ) ) {
 		public $cache_allowed;
 
 		public function __construct() {
+			var_dump('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA');
 			$this->theme_slug    = 'base';
 			$this->version       = wp_get_theme( $this->theme_slug )->get('Version');
 			$this->cache_key     = 'hm_theme_update_cache';
@@ -27,7 +28,7 @@ if ( ! class_exists( 'HM_Private_Theme_Updater' ) ) {
 			if ( false === $remote || ! $this->cache_allowed ) {
 				$remote = wp_remote_get(
 					// Needs to point to the update server themes json file
-					'http://dkrystev.harbingermarketing.local/projects/base/wp-content/updater/themes.json',
+					'https://github.com/UnicornTT/theme-updater/blob/master/latest.json',
 					array(
 						'timeout' => 10,
 						'headers' => array(
